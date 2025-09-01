@@ -5,8 +5,9 @@ from app.database import SessionLocal, engine, Base
 from app.models.anggota import Anggota
 from app.schemas.anggota import AnggotaOut
 from app.routers import anggota_router
+from app.database import Base, engine
 
-
+Base.metadata.create_all(bind=engine)
 app = FastAPI(title="API Komunitas")
 
 app.include_router(anggota_router.router)
