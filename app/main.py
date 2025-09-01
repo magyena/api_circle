@@ -4,6 +4,7 @@ from typing import List
 from app.database import SessionLocal, engine, Base
 from app.models.anggota import Anggota
 from app.schemas.anggota import AnggotaOut
+from app.routers import anggota_router
 
 
 app = FastAPI(title="API Komunitas")
